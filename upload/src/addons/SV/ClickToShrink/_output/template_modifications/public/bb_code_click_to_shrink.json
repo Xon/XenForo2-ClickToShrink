@@ -1,0 +1,9 @@
+{
+    "template": "bb_code.less",
+    "description": "Click to shrink LESS",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": ".bbCodeBlock-expandLink\n{",
+    "replace": "\n.bbCodeBlock--expandable.is-expanded .bbCodeBlock-shrinkLink\n{\n\tdisplay:block;\n\theight:20px;\n\tposition:static;\n}\n\n.bbCodeBlock-shrinkLink,\n$0"
+}

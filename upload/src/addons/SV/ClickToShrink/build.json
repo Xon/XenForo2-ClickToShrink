@@ -1,0 +1,8 @@
+{
+  "additional_files": [
+    "js/sv/clicktoshrink"
+  ],
+  "minify": [
+    "js/sv/clicktoshrink/shrinker.js"
+  ]
+}

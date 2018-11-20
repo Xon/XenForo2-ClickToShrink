@@ -1,0 +1,9 @@
+{
+    "template": "bb_code_tag_quote",
+    "description": "Click to shrink html/js",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<div class=\"bbCodeBlock-expandLink\"><a>{{ phrase('click_to_expand') }}</a></div>",
+    "replace": "$0\n<div class=\"bbCodeBlock-shrinkLink\"><a>{{ phrase('click_to_shrink') }}</a></div>"
+}
