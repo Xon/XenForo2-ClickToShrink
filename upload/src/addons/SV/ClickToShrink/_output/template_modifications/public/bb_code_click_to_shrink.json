@@ -5,5 +5,5 @@
     "enabled": true,
     "action": "str_replace",
     "find": ".bbCodeBlock-expandLink\n{",
-    "replace": "\n.bbCodeBlock--expandable.is-expanded .bbCodeBlock-shrinkLink\n{\n\tdisplay:block;\n\theight:20px;\n\tposition:static;\n}\n\n.bbCodeBlock-shrinkLink,\n$0"
+    "replace": ".bbCodeBlock--expandable.is-expanded > div > .bbCodeBlock-shrinkLink\n{\n\tdisplay:block;\n\theight:20px;\n\tposition:static;\n}\n\n.bbCodeBlock-shrinkLink,\n$0"
 }
