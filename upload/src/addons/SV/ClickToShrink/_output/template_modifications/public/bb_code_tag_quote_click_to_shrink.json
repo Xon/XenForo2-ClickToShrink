@@ -5,5 +5,5 @@
     "enabled": true,
     "action": "str_replace",
     "find": "<div class=\"bbCodeBlock-expandLink\"><a>{{ phrase('click_to_expand') }}</a></div>",
-    "replace": "$0\n<div class=\"bbCodeBlock-shrinkLink\"><a>{{ phrase('click_to_shrink') }}</a></div>"
+    "replace": "$0\n<xf:js src=\"sv/clicktoshrink/shrinker.js\" addon=\"SV/ClickToShrink\" min=\"1\" />\n<div class=\"bbCodeBlock-shrinkLink\"><a>{{ phrase('click_to_shrink') }}</a></div>"
 }
