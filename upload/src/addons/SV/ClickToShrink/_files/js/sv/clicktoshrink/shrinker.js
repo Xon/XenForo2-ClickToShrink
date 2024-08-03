@@ -6,21 +6,32 @@
  */
 
 var SV = window.SV || {};
-(function($, window, document, _undefined)
+SV.$ = SV.$ || window.jQuery || null;
+
+!function(window, document)
 {
     "use strict";
+    const $ = SV.$, xf22 = typeof XF.on !== "function";
 
-    SV.BbBlockShrink = (function()
+    SV.BbBlockShrink = (() =>
     {
-        var containerSel = '.bbCodeBlock--expandable';
-
-        function watch()
+        const containerSel = '.bbCodeBlock--expandable';
+        const watch = () =>
         {
-            $(document).on('click', '.bbCodeBlock-shrinkLink', function(e)
+            if (xf22)
             {
-                var $target = $(e.target);
-                $target.closest(containerSel).removeClassTransitioned('is-expanded', XF.layoutChange);
-            });
+                $(document).on('click', '.bbCodeBlock-shrinkLink', (e) => {
+                    const $target = $(e.target);
+                    $target.closest(containerSel).removeClassTransitioned('is-expanded', XF.layoutChange);
+                });
+            }
+            else
+            {
+                XF.onDelegated(document, 'click', '.bbCodeBlock-shrinkLink', e =>
+                {
+                    XF.Transition.removeClassTransitioned(e.target.closest(containerSel), 'is-expanded', XF.layoutChange)
+                })
+            }
         }
 
         return {
@@ -28,8 +39,17 @@ var SV = window.SV || {};
         }
     })();
 
-    $(document).on('xf:page-load-complete', function () {
-        SV.BbBlockShrink.watch();
-    });
-
-}(jQuery, window, document));
+    if (xf22)
+    {
+        $(document).on('xf:page-load-complete', () => {
+            SV.BbBlockShrink.watch();
+        });
+    }
+    else
+    {
+        XF.on(document, 'xf:page-load-complete', () => {
+            SV.BbBlockShrink.watch();
+        })
+    }
+}
+(window, document);
