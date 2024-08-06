@@ -7,8 +7,11 @@
     "dev": "Atelier Aphelion",
     "dev_url": "https://atelieraphelion.com",
     "faq_url": "",
-    "support_url": "https://atelieraphelion.com/products/click-to-shrink.77/",
-    "extra_urls": [],
+    "support_url": "https://atelieraphelion.com/",
+    "extra_urls": {
+        "License": "https://atelieraphelion.com/products/license-agreement/",
+        "Add-on site": "https://atelieraphelion.com/products/click-to-shrink.77/"
+    },
     "require": {
         "XF": [2020070, "XenForo 2.2.0+"],
         "php": ["7.2.0", "PHP 7.2.0+"]
