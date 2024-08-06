@@ -2,7 +2,7 @@
     "legacy_addon_id": "",
     "title": "Click to shrink",
     "description": "Shrink quotes after they have expanded",
-    "version_id": 1010000,
+    "version_id": 1722936832,
     "version_string": "1.1.0",
     "dev": "Atelier Aphelion",
     "dev_url": "https://atelieraphelion.com",
@@ -13,8 +13,14 @@
         "Add-on site": "https://atelieraphelion.com/products/click-to-shrink.77/"
     },
     "require": {
-        "XF": [2020070, "XenForo 2.2.0+"],
-        "php": ["7.2.0", "PHP 7.2.0+"]
+        "XF": [
+            2020070,
+            "XenForo 2.2.0+"
+        ],
+        "php": [
+            "7.2.0",
+            "PHP 7.2.0+"
+        ]
     },
     "icon": "fa-compress"
 }
